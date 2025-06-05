@@ -1,0 +1,802 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/vasija#VasijaDeBarro_Ontology#"
+     xml:base="http://example.org/vasija#VasijaDeBarro_Ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vasija="http://example.org/vasija#">
+    <owl:Ontology rdf:about="http://example.org/vasija#VasijaDeBarro_Ontology">
+        <dc:creator>Diana Bermeo</dc:creator>
+        <dc:description>El objetivo de la ontologia es modelar y representar formalmente el conocimiento sobre expresiones culturales ecuatorianas, como poemas, canciones,eventos y personajes relevantes, con el fin de facilitar su organizacion, recuperacion y analisis desde una perspectiva semantica.</dc:description>
+        <dc:title>Ontología Vasija de Barro Ecuatoriana</dc:title>
+        <rdfs:label>MiPrimeraOntologia</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/vasija#colaboraCon -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#colaboraCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Indica una relación de colaboración mutua entre personas.</rdfs:comment>
+        <rdfs:label xml:lang="es">colabora con</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#compartePatrimonioCon -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#compartePatrimonioCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#ElementoCultural"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#ElementoCultural"/>
+        <rdfs:comment xml:lang="es">Representa que un elemento cultural comparte patrimonio o rasgos comunes con otro elemento cultural, incluso consigo mismo.</rdfs:comment>
+        <rdfs:label xml:lang="es">comparte patrimonio con</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#componeEstrofa -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#componeEstrofa">
+        <rdfs:domain rdf:resource="http://example.org/vasija#Poeta"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#Estrofa"/>
+        <rdfs:comment xml:lang="es">Indica que un poeta es autor de una estrofa.</rdfs:comment>
+        <rdfs:label xml:lang="es">compone estrofa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#esAutorDe -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#esAutorDe">
+        <owl:inverseOf rdf:resource="http://example.org/vasija#tieneAutor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Indica que una persona ha creado una obra artística.</rdfs:comment>
+        <rdfs:label xml:lang="es">es autor de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#esParteDe -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#esParteDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#Estrofa"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Expresa que una estrofa pertenece a una obra artística más amplia.</rdfs:comment>
+        <rdfs:label xml:lang="es">es parte de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#inspiraA -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#inspiraA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/vasija#inspiraA"/>
+            <rdf:Description rdf:about="http://example.org/vasija#inspiraA"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="es">Indica que una obra artística ha sido fuente de inspiración para otra, y esta relación puede ser transitiva pero no reflexiva ni simétrica.</rdfs:comment>
+        <rdfs:label xml:lang="es">inspira a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#ocurreEn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#ocurreEn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#EventoCultural"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#LugarGeografico"/>
+        <rdfs:comment xml:lang="es">Establece el lugar geográfico donde se lleva a cabo un evento cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">ocurre en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#participaEn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#participaEn">
+        <owl:inverseOf rdf:resource="http://example.org/vasija#tieneParticipante"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#EventoCultural"/>
+        <rdfs:comment xml:lang="es">Indica la participación de una persona en un evento cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">participa en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#seInspiraEn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#seInspiraEn">
+        <rdfs:domain rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Indica que una obra artística ha sido influenciada o motivada por otra obra artística.</rdfs:comment>
+        <rdfs:label xml:lang="es">se inspira en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#tieneAutor -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#tieneAutor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Especifica que una obra artística fue creada por una persona determinada.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene autor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#tieneParticipante -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#tieneParticipante">
+        <rdfs:domain rdf:resource="http://example.org/vasija#EventoCultural"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Indica que una persona participa en un evento cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene participante</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/vasija#tieneRitmo -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/vasija#tieneRitmo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/vasija#Cancion"/>
+        <rdfs:range rdf:resource="http://example.org/vasija#RitmoMusical"/>
+        <rdfs:comment xml:lang="es">Establece el ritmo musical que caracteriza a una canción determinada.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene ritmo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/vasija#contenido -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/vasija#contenido">
+        <rdfs:domain rdf:resource="http://example.org/vasija#Estrofa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Texto o lírica que forma parte de una estrofa de una obra artística.</rdfs:comment>
+        <rdfs:label xml:lang="es">contenido</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/vasija#duracion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/vasija#duracion">
+        <rdfs:domain rdf:resource="http://example.org/vasija#Cancion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Duración temporal de una canción expresada en minutos o segundos.</rdfs:comment>
+        <rdfs:label xml:lang="es">duración</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/vasija#fechaCreacion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/vasija#fechaCreacion">
+        <rdfs:domain rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="es">Fecha en que fue creada una obra artística, como una pintura, canción o poema.</rdfs:comment>
+        <rdfs:label xml:lang="es">fecha de creación</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/vasija#nombre -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/vasija#nombre">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/vasija#EventoCultural"/>
+                    <rdf:Description rdf:about="http://example.org/vasija#LugarGeográfico"/>
+                    <rdf:Description rdf:about="http://example.org/vasija#Persona"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Nombre propio de una persona, lugar geográfico o evento cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">nombre</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/vasija#titulo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/vasija#titulo">
+        <rdfs:domain rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Título oficial de una obra artística, como una canción, pintura o poema.</rdfs:comment>
+        <rdfs:label xml:lang="es">título</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/vasija#Cancion -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Cancion">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Obra musical que combina letra y melodía, con valor artístico y cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">Canción</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#ElementoCultural -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#ElementoCultural">
+        <rdfs:comment xml:lang="es">Cualquier objeto, práctica o símbolo con relevancia para una cultura o tradición.</rdfs:comment>
+        <rdfs:label xml:lang="es">Elemento Cultural</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Escultor -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Escultor">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Persona que se dedica al arte de esculpir, generalmente en materiales como piedra, madera o barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Escultor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Estrofa -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Estrofa">
+        <rdfs:comment xml:lang="es">Conjunto de versos organizados como una unidad dentro de una canción o poema.</rdfs:comment>
+        <rdfs:label xml:lang="es">Estrofa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#EventoCultural -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#EventoCultural">
+        <rdfs:comment xml:lang="es">Actividad organizada que promueve, representa o celebra la cultura de una comunidad.</rdfs:comment>
+        <rdfs:label xml:lang="es">Evento Cultural</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Grabacion -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Grabacion">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#EventoCultural"/>
+        <rdfs:comment xml:lang="es">Registro de audio o video de una interpretación, discurso o presentación cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">Grabación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#InstrumentoMusical -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#InstrumentoMusical">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#ElementoCultural"/>
+        <rdfs:comment xml:lang="es">Objeto creado para producir sonidos musicales, con valor artístico y cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">Instrumento Musical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Intelectual -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Intelectual">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Persona dedicada al pensamiento crítico, la creación o el análisis de contenido cultural o científico.</rdfs:comment>
+        <rdfs:label xml:lang="es">Intelectual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#LugarGeografico -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#LugarGeografico">
+        <rdfs:comment xml:lang="es">Ubicación física que puede tener importancia cultural, histórica o simbólica.</rdfs:comment>
+        <rdfs:label xml:lang="es">Lugar Geográfico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#LugarGeográfico -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#LugarGeográfico"/>
+    
+
+
+    <!-- http://example.org/vasija#Musico -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Musico">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Persona que interpreta, compone o ejecuta obras musicales.</rdfs:comment>
+        <rdfs:label xml:lang="es">Músico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#ObraArtistica -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#ObraArtistica">
+        <rdfs:comment xml:lang="es">Creación que expresa sentimientos o ideas mediante formas como la música, pintura, poesía, etc.</rdfs:comment>
+        <rdfs:label xml:lang="es">Obra Artística</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Persona -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Persona">
+        <rdfs:comment xml:lang="es">Ser humano involucrado en la creación, difusión o interpretación de elementos culturales.</rdfs:comment>
+        <rdfs:label xml:lang="es">Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Pintor -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Pintor">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Persona que se dedica al arte de la pintura, usando distintos materiales y técnicas.</rdfs:comment>
+        <rdfs:label xml:lang="es">Pintor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Pintura -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Pintura">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Expresión visual realizada con pigmentos sobre una superficie, considerada una obra artística.</rdfs:comment>
+        <rdfs:label xml:lang="es">Pintura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Poema -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Poema">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">Composición literaria que expresa emociones o ideas mediante lenguaje poético.</rdfs:comment>
+        <rdfs:label xml:lang="es">Poema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Poeta -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Poeta">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#Persona"/>
+        <rdfs:comment xml:lang="es">Persona que compone poemas, utilizando recursos literarios y estéticos.</rdfs:comment>
+        <rdfs:label xml:lang="es">Poeta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#Reunion -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#Reunion">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#EventoCultural"/>
+        <rdfs:comment xml:lang="es">Encuentro de personas con fines culturales, artísticos o sociales.</rdfs:comment>
+        <rdfs:label xml:lang="es">Reunión</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/vasija#RitmoMusical -->
+
+
+    <owl:Class rdf:about="http://example.org/vasija#RitmoMusical">
+        <rdfs:subClassOf rdf:resource="http://example.org/vasija#ElementoCultural"/>
+        <rdfs:comment xml:lang="es">Patrón de sonidos regulares en el tiempo, componente esencial de la música.</rdfs:comment>
+        <rdfs:label xml:lang="es">Ritmo Musical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/vasija#Albazo -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Albazo">
+        <rdf:type rdf:resource="http://example.org/vasija#RitmoMusical"/>
+        <vasija:nombre>Albazo</vasija:nombre>
+        <rdfs:comment xml:lang="es">Ritmo musical tradicional ecuatoriano, caracterizado por su alegría y vivacidad, típico de las festividades.</rdfs:comment>
+        <rdfs:label xml:lang="es">Albazo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Centro_de_Quito -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Centro_de_Quito">
+        <rdf:type rdf:resource="http://example.org/vasija#LugarGeografico"/>
+        <vasija:nombre>Centro Histórico de Quito</vasija:nombre>
+        <rdfs:comment xml:lang="es">Área patrimonial de la ciudad de Quito, conocida por su arquitectura colonial y valor cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">Centro Histórico de Quito</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Danzante -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Danzante">
+        <rdf:type rdf:resource="http://example.org/vasija#RitmoMusical"/>
+        <vasija:nombre>Danzante</vasija:nombre>
+        <rdfs:comment xml:lang="es">Ritmo musical ancestral de los Andes ecuatorianos, vinculado a rituales indígenas y fiestas tradicionales.</rdfs:comment>
+        <rdfs:label xml:lang="es">Danzante</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#El_Origen_Pintura -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#El_Origen_Pintura">
+        <rdf:type rdf:resource="http://example.org/vasija#Pintura"/>
+        <vasija:inspiraA rdf:resource="http://example.org/vasija#Vasija_de_Barro_Cancion"/>
+        <vasija:tieneAutor rdf:resource="http://example.org/vasija#Oswaldo_Guayasamin"/>
+        <vasija:titulo>El Origen</vasija:titulo>
+        <rdfs:comment xml:lang="es">Obra pictórica de Oswaldo Guayasamín que inspiró la creación de la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Pintura El Origen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#El_Pollito_Ortiz -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#El_Pollito_Ortiz">
+        <rdf:type rdf:resource="http://example.org/vasija#Musico"/>
+        <vasija:nombre>El Pollito Ortiz</vasija:nombre>
+        <rdfs:comment xml:lang="es">Músico ecuatoriano reconocido por su participación en la interpretación de música popular nacional.</rdfs:comment>
+        <rdfs:label xml:lang="es">El Pollito Ortiz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Gonzalo_Benitez -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Gonzalo_Benitez">
+        <rdf:type rdf:resource="http://example.org/vasija#Musico"/>
+        <vasija:nombre>Gonzalo Benítez</vasija:nombre>
+        <rdfs:comment xml:lang="es">Cantante ecuatoriano, coautor e intérprete de la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Gonzalo Benítez</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Gustavo_Muller -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Gustavo_Muller">
+        <rdf:type rdf:resource="http://example.org/vasija#Musico"/>
+        <vasija:nombre>Gustavo Muller</vasija:nombre>
+        <rdfs:comment xml:lang="es">Músico ecuatoriano reconocido por sus aportes a la música tradicional nacional.</rdfs:comment>
+        <rdfs:label xml:lang="es">Gustavo Muller</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Hugo_Aleman -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Hugo_Aleman">
+        <rdf:type rdf:resource="http://example.org/vasija#Intelectual"/>
+        <vasija:nombre>Hugo Alemán</vasija:nombre>
+        <rdfs:comment xml:lang="es">Intelectual ecuatoriano que participó en la reunión donde se gestó la idea de la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Hugo Alemán</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Jaime_Valencia -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Jaime_Valencia">
+        <rdf:type rdf:resource="http://example.org/vasija#Escultor"/>
+        <vasija:nombre>Jaime Valencia</vasija:nombre>
+        <rdfs:comment xml:lang="es">Escultor ecuatoriano destacado por sus obras que reflejan la identidad nacional.</rdfs:comment>
+        <rdfs:label xml:lang="es">Jaime Valencia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Jorge_Carrera_Andrade -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Jorge_Carrera_Andrade">
+        <rdf:type rdf:resource="http://example.org/vasija#Poeta"/>
+        <vasija:nombre>Jorge Carrera Andrade</vasija:nombre>
+        <rdfs:comment xml:lang="es">Poeta ecuatoriano autor del poema en que se basa la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Jorge Carrera Andrade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Jorge_Enrique_Adoum -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Jorge_Enrique_Adoum">
+        <rdf:type rdf:resource="http://example.org/vasija#Intelectual"/>
+        <vasija:nombre>Jorge Enrique Adoum</vasija:nombre>
+        <rdfs:comment xml:lang="es">Escritor e intelectual ecuatoriano de gran influencia cultural en el siglo XX.</rdfs:comment>
+        <rdfs:label xml:lang="es">Jorge Enrique Adoum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Luis_Alberto_Valencia -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Luis_Alberto_Valencia">
+        <rdf:type rdf:resource="http://example.org/vasija#Musico"/>
+        <vasija:nombre>Luis Alberto Valencia</vasija:nombre>
+        <rdfs:comment xml:lang="es">Músico ecuatoriano, coautor de la canción Vasija de Barro junto con Gonzalo Benítez.</rdfs:comment>
+        <rdfs:label xml:lang="es">Luis Alberto Valencia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Oswaldo_Guayasamin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Oswaldo_Guayasamin">
+        <rdf:type rdf:resource="http://example.org/vasija#Pintor"/>
+        <vasija:nombre>Oswaldo Guayasamín</vasija:nombre>
+        <rdfs:comment xml:lang="es">Pintor ecuatoriano de renombre internacional, creador de la obra El Origen.</rdfs:comment>
+        <rdfs:label xml:lang="es">Oswaldo Guayasamín</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Primera_Estrofa_Poema -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Primera_Estrofa_Poema">
+        <rdf:type rdf:resource="http://example.org/vasija#Estrofa"/>
+        <vasija:esParteDe rdf:resource="http://example.org/vasija#Vasija_de_Barro_Cancion"/>
+        <vasija:tieneAutor rdf:resource="http://example.org/vasija#Jorge_Carrera_Andrade"/>
+        <vasija:contenido>Yo quiero que a mí me entierren como a mis antepasados en el vientre oscuro y fresco de una vasija de barro</vasija:contenido>
+        <rdfs:comment xml:lang="es">Verso inicial del poema de Jorge Carrera Andrade que inspira la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Primera estrofa del poema</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Primera_Grabacion_Vasija -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Primera_Grabacion_Vasija">
+        <rdf:type rdf:resource="http://example.org/vasija#Grabacion"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Gonzalo_Benitez"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Luis_Alberto_Valencia"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Oswaldo_Guayasamin"/>
+        <vasija:nombre>Primera Grabación Vasija de Barro</vasija:nombre>
+        <rdfs:comment xml:lang="es">Grabación inicial de la canción Vasija de Barro con la participación de sus autores y el pintor Guayasamín.</rdfs:comment>
+        <rdfs:label xml:lang="es">Primera grabación de Vasija de Barro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Residencia_Guayasamin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Residencia_Guayasamin">
+        <rdf:type rdf:resource="http://example.org/vasija#LugarGeografico"/>
+        <vasija:nombre>Residencia de Guayasamín</vasija:nombre>
+        <rdfs:comment xml:lang="es">Hogar del pintor Oswaldo Guayasamín, lugar donde ocurrió la reunión del 7 de noviembre de 1950.</rdfs:comment>
+        <rdfs:label xml:lang="es">Residencia de Guayasamín</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Reunion_7_Noviembre_1950 -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Reunion_7_Noviembre_1950">
+        <rdf:type rdf:resource="http://example.org/vasija#Reunion"/>
+        <vasija:ocurreEn rdf:resource="http://example.org/vasija#Residencia_Guayasamin"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Hugo_Aleman"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Jorge_Carrera_Andrade"/>
+        <vasija:tieneParticipante rdf:resource="http://example.org/vasija#Oswaldo_Guayasamin"/>
+        <vasija:nombre>Reunión del 7 de noviembre de 1950</vasija:nombre>
+        <rdfs:comment xml:lang="es">Encuentro entre intelectuales ecuatorianos donde se gestó la creación de la canción Vasija de Barro.</rdfs:comment>
+        <rdfs:label xml:lang="es">Reunión del 7 de noviembre de 1950</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/vasija#Vasija_de_Barro_Cancion -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/vasija#Vasija_de_Barro_Cancion">
+        <rdf:type rdf:resource="http://example.org/vasija#Cancion"/>
+        <vasija:tieneAutor rdf:resource="http://example.org/vasija#Gonzalo_Benitez"/>
+        <vasija:tieneAutor rdf:resource="http://example.org/vasija#Luis_Alberto_Valencia"/>
+        <vasija:tieneRitmo rdf:resource="http://example.org/vasija#Danzante"/>
+        <vasija:titulo>Vasija de Barro</vasija:titulo>
+        <rdfs:comment xml:lang="es">Canción emblemática de la identidad ecuatoriana que combina poesía, música y pintura como expresión cultural.</rdfs:comment>
+        <rdfs:label xml:lang="es">Canción Vasija de Barro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <dc:description>Entidades</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <dc:description>Propiedades de Datos</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <dc:description>Propiedades de Objetos</dc:description>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

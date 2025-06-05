@@ -1,0 +1,919 @@
+[ {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://example.org/vasija#EventoCultural"
+    }, {
+      "@id" : "http://example.org/vasija#LugarGeográfico"
+    }, {
+      "@id" : "http://example.org/vasija#Persona"
+    } ]
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Albazo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Albazo"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#RitmoMusical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Ritmo musical tradicional ecuatoriano, caracterizado por su alegría y vivacidad, típico de las festividades."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Albazo"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Cancion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Obra musical que combina letra y melodía, con valor artístico y cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Canción"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Centro_de_Quito",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Centro Histórico de Quito"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#LugarGeografico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Área patrimonial de la ciudad de Quito, conocida por su arquitectura colonial y valor cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Centro Histórico de Quito"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Danzante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Danzante"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#RitmoMusical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Ritmo musical ancestral de los Andes ecuatorianos, vinculado a rituales indígenas y fiestas tradicionales."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Danzante"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#El_Origen_Pintura",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#inspiraA" : [ {
+    "@id" : "http://example.org/vasija#Vasija_de_Barro_Cancion"
+  } ],
+  "http://example.org/vasija#tieneAutor" : [ {
+    "@id" : "http://example.org/vasija#Oswaldo_Guayasamin"
+  } ],
+  "http://example.org/vasija#titulo" : [ {
+    "@value" : "El Origen"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Pintura"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Obra pictórica de Oswaldo Guayasamín que inspiró la creación de la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Pintura El Origen"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#El_Pollito_Ortiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "El Pollito Ortiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Musico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Músico ecuatoriano reconocido por su participación en la interpretación de música popular nacional."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "El Pollito Ortiz"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#ElementoCultural",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cualquier objeto, práctica o símbolo con relevancia para una cultura o tradición."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Elemento Cultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Escultor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Persona que se dedica al arte de esculpir, generalmente en materiales como piedra, madera o barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Escultor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Estrofa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Conjunto de versos organizados como una unidad dentro de una canción o poema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Estrofa"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#EventoCultural",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Actividad organizada que promueve, representa o celebra la cultura de una comunidad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Evento Cultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Gonzalo_Benitez",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Gonzalo Benítez"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Musico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cantante ecuatoriano, coautor e intérprete de la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Gonzalo Benítez"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Grabacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Registro de audio o video de una interpretación, discurso o presentación cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Grabación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#EventoCultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Gustavo_Muller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Gustavo Muller"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Musico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Músico ecuatoriano reconocido por sus aportes a la música tradicional nacional."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Gustavo Muller"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Hugo_Aleman",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Hugo Alemán"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Intelectual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Intelectual ecuatoriano que participó en la reunión donde se gestó la idea de la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Hugo Alemán"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#InstrumentoMusical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Objeto creado para producir sonidos musicales, con valor artístico y cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Instrumento Musical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#ElementoCultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Intelectual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Persona dedicada al pensamiento crítico, la creación o el análisis de contenido cultural o científico."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Intelectual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Jaime_Valencia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Jaime Valencia"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Escultor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Escultor ecuatoriano destacado por sus obras que reflejan la identidad nacional."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Jaime Valencia"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Jorge_Carrera_Andrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Jorge Carrera Andrade"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Poeta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Poeta ecuatoriano autor del poema en que se basa la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Jorge Carrera Andrade"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Jorge_Enrique_Adoum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Jorge Enrique Adoum"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Intelectual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Escritor e intelectual ecuatoriano de gran influencia cultural en el siglo XX."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Jorge Enrique Adoum"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#LugarGeografico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Ubicación física que puede tener importancia cultural, histórica o simbólica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Lugar Geográfico"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#LugarGeográfico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://example.org/vasija#Luis_Alberto_Valencia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Luis Alberto Valencia"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Musico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Músico ecuatoriano, coautor de la canción Vasija de Barro junto con Gonzalo Benítez."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Luis Alberto Valencia"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Musico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Persona que interpreta, compone o ejecuta obras musicales."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Músico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#ObraArtistica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Creación que expresa sentimientos o ideas mediante formas como la música, pintura, poesía, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Obra Artística"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Oswaldo_Guayasamin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Oswaldo Guayasamín"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Pintor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Pintor ecuatoriano de renombre internacional, creador de la obra El Origen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Oswaldo Guayasamín"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Persona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Ser humano involucrado en la creación, difusión o interpretación de elementos culturales."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Pintor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Persona que se dedica al arte de la pintura, usando distintos materiales y técnicas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Pintor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Pintura",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Expresión visual realizada con pigmentos sobre una superficie, considerada una obra artística."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Pintura"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Poema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Composición literaria que expresa emociones o ideas mediante lenguaje poético."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Poema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Poeta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Persona que compone poemas, utilizando recursos literarios y estéticos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Poeta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Primera_Estrofa_Poema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#contenido" : [ {
+    "@value" : "Yo quiero que a mí me entierren como a mis antepasados en el vientre oscuro y fresco de una vasija de barro"
+  } ],
+  "http://example.org/vasija#esParteDe" : [ {
+    "@id" : "http://example.org/vasija#Vasija_de_Barro_Cancion"
+  } ],
+  "http://example.org/vasija#tieneAutor" : [ {
+    "@id" : "http://example.org/vasija#Jorge_Carrera_Andrade"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Estrofa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Verso inicial del poema de Jorge Carrera Andrade que inspira la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Primera estrofa del poema"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Primera_Grabacion_Vasija",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Primera Grabación Vasija de Barro"
+  } ],
+  "http://example.org/vasija#tieneParticipante" : [ {
+    "@id" : "http://example.org/vasija#Gonzalo_Benitez"
+  }, {
+    "@id" : "http://example.org/vasija#Luis_Alberto_Valencia"
+  }, {
+    "@id" : "http://example.org/vasija#Oswaldo_Guayasamin"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Grabacion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Grabación inicial de la canción Vasija de Barro con la participación de sus autores y el pintor Guayasamín."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Primera grabación de Vasija de Barro"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Residencia_Guayasamin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Residencia de Guayasamín"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#LugarGeografico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Hogar del pintor Oswaldo Guayasamín, lugar donde ocurrió la reunión del 7 de noviembre de 1950."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Residencia de Guayasamín"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Reunion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Encuentro de personas con fines culturales, artísticos o sociales."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Reunión"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#EventoCultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Reunion_7_Noviembre_1950",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#nombre" : [ {
+    "@value" : "Reunión del 7 de noviembre de 1950"
+  } ],
+  "http://example.org/vasija#ocurreEn" : [ {
+    "@id" : "http://example.org/vasija#Residencia_Guayasamin"
+  } ],
+  "http://example.org/vasija#tieneParticipante" : [ {
+    "@id" : "http://example.org/vasija#Hugo_Aleman"
+  }, {
+    "@id" : "http://example.org/vasija#Jorge_Carrera_Andrade"
+  }, {
+    "@id" : "http://example.org/vasija#Oswaldo_Guayasamin"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Reunion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Encuentro entre intelectuales ecuatorianos donde se gestó la creación de la canción Vasija de Barro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Reunión del 7 de noviembre de 1950"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#RitmoMusical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Patrón de sonidos regulares en el tiempo, componente esencial de la música."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Ritmo Musical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.org/vasija#ElementoCultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#VasijaDeBarro_Ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Diana Bermeo"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "El objetivo de la ontologia es modelar y representar formalmente el conocimiento sobre expresiones culturales ecuatorianas, como poemas, canciones,eventos y personajes relevantes, con el fin de facilitar su organizacion, recuperacion y analisis desde una perspectiva semantica."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Ontología Vasija de Barro Ecuatoriana"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#Vasija_de_Barro_Cancion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://example.org/vasija#tieneAutor" : [ {
+    "@id" : "http://example.org/vasija#Gonzalo_Benitez"
+  }, {
+    "@id" : "http://example.org/vasija#Luis_Alberto_Valencia"
+  } ],
+  "http://example.org/vasija#tieneRitmo" : [ {
+    "@id" : "http://example.org/vasija#Danzante"
+  } ],
+  "http://example.org/vasija#titulo" : [ {
+    "@value" : "Vasija de Barro"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://example.org/vasija#Cancion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Canción emblemática de la identidad ecuatoriana que combina poesía, música y pintura como expresión cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Canción Vasija de Barro"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#colaboraCon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica una relación de colaboración mutua entre personas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "colabora con"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#compartePatrimonioCon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Representa que un elemento cultural comparte patrimonio o rasgos comunes con otro elemento cultural, incluso consigo mismo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ElementoCultural"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "comparte patrimonio con"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#ElementoCultural"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#componeEstrofa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un poeta es autor de una estrofa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Poeta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "compone estrofa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#Estrofa"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#contenido",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Texto o lírica que forma parte de una estrofa de una obra artística."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Estrofa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "contenido"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#duracion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Duración temporal de una canción expresada en minutos o segundos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Cancion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "duración"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#esAutorDe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una persona ha creado una obra artística."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es autor de"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/vasija#tieneAutor"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#esParteDe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Expresa que una estrofa pertenece a una obra artística más amplia."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Estrofa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es parte de"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#fechaCreacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fecha en que fue creada una obra artística, como una pintura, canción o poema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fecha de creación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#inspiraA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una obra artística ha sido fuente de inspiración para otra, y esta relación puede ser transitiva pero no reflexiva ni simétrica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "inspira a"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://example.org/vasija#inspiraA"
+    }, {
+      "@id" : "http://example.org/vasija#inspiraA"
+    } ]
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#nombre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Nombre propio de una persona, lugar geográfico o evento cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "nombre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#ocurreEn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Establece el lugar geográfico donde se lleva a cabo un evento cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#EventoCultural"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "ocurre en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#LugarGeografico"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#participaEn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la participación de una persona en un evento cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "participa en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#EventoCultural"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://example.org/vasija#tieneParticipante"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#seInspiraEn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una obra artística ha sido influenciada o motivada por otra obra artística."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "se inspira en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#tieneAutor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Especifica que una obra artística fue creada por una persona determinada."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tiene autor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#tieneParticipante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una persona participa en un evento cultural."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#EventoCultural"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tiene participante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#Persona"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#tieneRitmo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Establece el ritmo musical que caracteriza a una canción determinada."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#Cancion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "tiene ritmo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/vasija#RitmoMusical"
+  } ]
+}, {
+  "@id" : "http://example.org/vasija#titulo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Título oficial de una obra artística, como una canción, pintura o poema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/vasija#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "título"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+} ]

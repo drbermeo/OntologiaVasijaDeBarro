@@ -1,0 +1,1502 @@
+{
+  "_comment": "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org [Additional Information added by WebVOWL Exporter Version: 1.1.7]",
+  "header": {
+    "languages": [
+      "undefined",
+      "es"
+    ],
+    "baseIris": [
+      "http://example.org/vasija",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "http://www.w3.org/2000/01/rdf-schema",
+      "http://www.w3.org/2001/XMLSchema"
+    ],
+    "prefixList": {
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "": "http://example.org/vasija#",
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "xml": "http://www.w3.org/XML/1998/namespace",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title": {
+      "undefined": "Ontología Vasija de Barro Ecuatoriana"
+    },
+    "iri": "http://example.org/vasija#VasijaDeBarro_Ontology",
+    "author": [
+      "Diana Bermeo"
+    ],
+    "description": {
+      "undefined": "El objetivo de la ontologia es modelar y representar formalmente el conocimiento sobre expresiones culturales ecuatorianas, como poemas, canciones,eventos y personajes relevantes, con el fin de facilitar su organizacion, recuperacion y analisis desde una perspectiva semantica."
+    },
+    "labels": {
+      "undefined": "MiPrimeraOntologia"
+    },
+    "other": {
+      "creator": [
+        {
+          "identifier": "creator",
+          "language": "undefined",
+          "value": "Diana Bermeo",
+          "type": "label"
+        }
+      ],
+      "title": [
+        {
+          "identifier": "title",
+          "language": "undefined",
+          "value": "Ontología Vasija de Barro Ecuatoriana",
+          "type": "label"
+        }
+      ]
+    }
+  },
+  "namespace": [],
+  "settings": {
+    "global": {
+      "zoom": "0.21",
+      "translation": [
+        399.02,
+        218.5
+      ],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "filter": {
+      "checkBox": [
+        {
+          "id": "datatypeFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "objectPropertyFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "subclassFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "disjointFilterCheckbox",
+          "checked": true
+        },
+        {
+          "id": "setoperatorFilterCheckbox",
+          "checked": false
+        }
+      ],
+      "degreeSliderValue": "0"
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "0",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "owl:Class"
+    },
+    {
+      "id": "6",
+      "type": "owl:Class"
+    },
+    {
+      "id": "8",
+      "type": "owl:Class"
+    },
+    {
+      "id": "9",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "11",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "27",
+      "type": "owl:Class"
+    },
+    {
+      "id": "7",
+      "type": "owl:Class"
+    },
+    {
+      "id": "33",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "39",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "40",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "22",
+      "type": "owl:Class"
+    },
+    {
+      "id": "41",
+      "type": "owl:Class"
+    },
+    {
+      "id": "18",
+      "type": "owl:Class"
+    },
+    {
+      "id": "48",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "13",
+      "type": "owl:Class"
+    },
+    {
+      "id": "35",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "3",
+      "type": "owl:Class"
+    },
+    {
+      "id": "19",
+      "type": "owl:Class"
+    },
+    {
+      "id": "29",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "0",
+      "iri": "http://example.org/vasija#Cancion",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Cancion",
+        "es": "Canción"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Obra musical que combina letra y melodía, con valor artístico y cultural."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Vasija_de_Barro_Cancion",
+          "labels": {
+            "IRI-based": "Vasija_de_Barro_Cancion",
+            "es": "Canción Vasija de Barro"
+          }
+        }
+      ],
+      "pos": [
+        87.69,
+        506.04
+      ]
+    },
+    {
+      "id": "2",
+      "iri": "http://example.org/vasija#Poeta",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Poeta",
+        "es": "Poeta"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Persona que compone poemas, utilizando recursos literarios y estéticos."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Jorge_Carrera_Andrade",
+          "labels": {
+            "IRI-based": "Jorge_Carrera_Andrade",
+            "es": "Jorge Carrera Andrade"
+          }
+        }
+      ],
+      "pos": [
+        953.84,
+        -191.68
+      ]
+    },
+    {
+      "id": "6",
+      "iri": "http://example.org/vasija#InstrumentoMusical",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "InstrumentoMusical",
+        "es": "Instrumento Musical"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Objeto creado para producir sonidos musicales, con valor artístico y cultural."
+      },
+      "pos": [
+        468.19,
+        1358.37
+      ]
+    },
+    {
+      "id": "8",
+      "iri": "http://example.org/vasija#Escultor",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Escultor",
+        "es": "Escultor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Persona que se dedica al arte de esculpir, generalmente en materiales como piedra, madera o barro."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Jaime_Valencia",
+          "labels": {
+            "IRI-based": "Jaime_Valencia",
+            "es": "Jaime Valencia"
+          }
+        }
+      ],
+      "pos": [
+        1132.72,
+        599.88
+      ]
+    },
+    {
+      "id": "9",
+      "iri": "http://example.org/vasija#Musico",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Musico",
+        "es": "Músico"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Persona que interpreta, compone o ejecuta obras musicales."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Gustavo_Muller",
+          "labels": {
+            "IRI-based": "Gustavo_Muller",
+            "es": "Gustavo Muller"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#Luis_Alberto_Valencia",
+          "labels": {
+            "IRI-based": "Luis_Alberto_Valencia",
+            "es": "Luis Alberto Valencia"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#Gonzalo_Benitez",
+          "labels": {
+            "IRI-based": "Gonzalo_Benitez",
+            "es": "Gonzalo Benítez"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#El_Pollito_Ortiz",
+          "labels": {
+            "IRI-based": "El_Pollito_Ortiz",
+            "es": "El Pollito Ortiz"
+          }
+        }
+      ],
+      "pos": [
+        1287.11,
+        494.32
+      ]
+    },
+    {
+      "id": "10",
+      "iri": "http://example.org/vasija#RitmoMusical",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "RitmoMusical",
+        "es": "Ritmo Musical"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Patrón de sonidos regulares en el tiempo, componente esencial de la música."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Albazo",
+          "labels": {
+            "IRI-based": "Albazo",
+            "es": "Albazo"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#Danzante",
+          "labels": {
+            "IRI-based": "Danzante",
+            "es": "Danzante"
+          }
+        }
+      ],
+      "pos": [
+        -11.35,
+        908.12
+      ]
+    },
+    {
+      "id": "11",
+      "iri": "http://example.org/vasija#EventoCultural",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "EventoCultural",
+        "es": "Evento Cultural"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Actividad organizada que promueve, representa o celebra la cultura de una comunidad."
+      },
+      "pos": [
+        723.91,
+        451.58
+      ]
+    },
+    {
+      "id": "1",
+      "iri": "http://example.org/vasija#ObraArtistica",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "ObraArtistica",
+        "es": "Obra Artística"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Creación que expresa sentimientos o ideas mediante formas como la música, pintura, poesía, etc."
+      },
+      "pos": [
+        341.63,
+        99.17
+      ]
+    },
+    {
+      "id": "17",
+      "iri": "http://example.org/vasija#Estrofa",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Estrofa",
+        "es": "Estrofa"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Conjunto de versos organizados como una unidad dentro de una canción o poema."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Primera_Estrofa_Poema",
+          "labels": {
+            "IRI-based": "Primera_Estrofa_Poema",
+            "es": "Primera estrofa del poema"
+          }
+        }
+      ],
+      "pos": [
+        531.42,
+        -317.68
+      ]
+    },
+    {
+      "id": "12",
+      "iri": "http://example.org/vasija#Grabacion",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Grabacion",
+        "es": "Grabación"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Registro de audio o video de una interpretación, discurso o presentación cultural."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Primera_Grabacion_Vasija",
+          "labels": {
+            "IRI-based": "Primera_Grabacion_Vasija",
+            "es": "Primera grabación de Vasija de Barro"
+          }
+        }
+      ],
+      "pos": [
+        845.06,
+        825.39
+      ]
+    },
+    {
+      "id": "27",
+      "iri": "http://example.org/vasija#Intelectual",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Intelectual",
+        "es": "Intelectual"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Persona dedicada al pensamiento crítico, la creación o el análisis de contenido cultural o científico."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Jorge_Enrique_Adoum",
+          "labels": {
+            "IRI-based": "Jorge_Enrique_Adoum",
+            "es": "Jorge Enrique Adoum"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#Hugo_Aleman",
+          "labels": {
+            "IRI-based": "Hugo_Aleman",
+            "es": "Hugo Alemán"
+          }
+        }
+      ],
+      "pos": [
+        1369.48,
+        303.39
+      ]
+    },
+    {
+      "id": "7",
+      "iri": "http://example.org/vasija#ElementoCultural",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "ElementoCultural",
+        "es": "Elemento Cultural"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Cualquier objeto, práctica o símbolo con relevancia para una cultura o tradición."
+      },
+      "pos": [
+        125.82,
+        1260.29
+      ]
+    },
+    {
+      "id": "33",
+      "iri": "http://www.w3.org/2001/XMLSchema#date",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "date"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        88.73,
+        229.94
+      ]
+    },
+    {
+      "id": "39",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        462.04,
+        -584.49
+      ]
+    },
+    {
+      "id": "40",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        53.02,
+        90.92
+      ]
+    },
+    {
+      "id": "22",
+      "iri": "http://example.org/vasija#LugarGeografico",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "LugarGeografico",
+        "es": "Lugar Geográfico"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Ubicación física que puede tener importancia cultural, histórica o simbólica."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Centro_de_Quito",
+          "labels": {
+            "IRI-based": "Centro_de_Quito",
+            "es": "Centro Histórico de Quito"
+          }
+        },
+        {
+          "iri": "http://example.org/vasija#Residencia_Guayasamin",
+          "labels": {
+            "IRI-based": "Residencia_Guayasamin",
+            "es": "Residencia de Guayasamín"
+          }
+        }
+      ],
+      "pos": [
+        518.74,
+        147.07
+      ]
+    },
+    {
+      "id": "41",
+      "attributes": [
+        "anonymous",
+        "union"
+      ],
+      "pos": [
+        816.48,
+        -45.86
+      ]
+    },
+    {
+      "id": "18",
+      "iri": "http://example.org/vasija#Poema",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Poema",
+        "es": "Poema"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Composición literaria que expresa emociones o ideas mediante lenguaje poético."
+      },
+      "pos": [
+        -46.73,
+        -42.24
+      ]
+    },
+    {
+      "id": "48",
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "string"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        929.38,
+        -322.78
+      ]
+    },
+    {
+      "id": "13",
+      "iri": "http://example.org/vasija#Reunion",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Reunion",
+        "es": "Reunión"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Encuentro de personas con fines culturales, artísticos o sociales."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Reunion_7_Noviembre_1950",
+          "labels": {
+            "IRI-based": "Reunion_7_Noviembre_1950",
+            "es": "Reunión del 7 de noviembre de 1950"
+          }
+        }
+      ],
+      "pos": [
+        611.82,
+        821.34
+      ]
+    },
+    {
+      "id": "35",
+      "iri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "decimal"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        -158.45,
+        588.25
+      ]
+    },
+    {
+      "id": "3",
+      "iri": "http://example.org/vasija#Persona",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Persona",
+        "es": "Persona"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Ser humano involucrado en la creación, difusión o interpretación de elementos culturales."
+      },
+      "pos": [
+        971.28,
+        228.37
+      ]
+    },
+    {
+      "id": "19",
+      "iri": "http://example.org/vasija#Pintura",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Pintura",
+        "es": "Pintura"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Expresión visual realizada con pigmentos sobre una superficie, considerada una obra artística."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#El_Origen_Pintura",
+          "labels": {
+            "IRI-based": "El_Origen_Pintura",
+            "es": "Pintura El Origen"
+          }
+        }
+      ],
+      "pos": [
+        72.63,
+        -213.05
+      ]
+    },
+    {
+      "id": "29",
+      "iri": "http://example.org/vasija#Pintor",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "Pintor",
+        "es": "Pintor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "es": "Persona que se dedica al arte de la pintura, usando distintos materiales y técnicas."
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/vasija#Oswaldo_Guayasamin",
+          "labels": {
+            "IRI-based": "Oswaldo_Guayasamin",
+            "es": "Oswaldo Guayasamín"
+          }
+        }
+      ],
+      "pos": [
+        1338.97,
+        66.19
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "14",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "15",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "16",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "20",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "21",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "23",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "24",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "25",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "26",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "28",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "30",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "31",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "32",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "34",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "36",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "37",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "38",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "42",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "43",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "44",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "45",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "46",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "47",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "50",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "51",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "52",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GENERATED-UNION-41-3-0",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-41-22-1",
+      "type": "setOperatorProperty"
+    },
+    {
+      "id": "GENERATED-UNION-41-11-2",
+      "type": "setOperatorProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "4",
+      "iri": "http://example.org/vasija#seInspiraEn",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "seInspiraEn",
+        "es": "se inspira en"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica que una obra artística ha sido influenciada o motivada por otra obra artística."
+      },
+      "domain": "1",
+      "range": "1",
+      "pos": [
+        329.6,
+        258.03
+      ]
+    },
+    {
+      "id": "5",
+      "iri": "http://example.org/vasija#tieneAutor",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "tieneAutor",
+        "es": "tiene autor"
+      },
+      "attributes": [
+        "object",
+        "external",
+        "irreflexive",
+        "asymmetric"
+      ],
+      "comment": {
+        "es": "Especifica que una obra artística fue creada por una persona determinada."
+      },
+      "domain": "1",
+      "range": "3",
+      "inverse": "45",
+      "pos": [
+        656.46,
+        163.77
+      ]
+    },
+    {
+      "id": "14",
+      "iri": "http://example.org/vasija#tieneParticipante",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "tieneParticipante",
+        "es": "tiene participante"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica que una persona participa en un evento cultural."
+      },
+      "domain": "11",
+      "range": "3",
+      "inverse": "20",
+      "pos": [
+        847.59,
+        339.97
+      ]
+    },
+    {
+      "id": "15",
+      "iri": "http://example.org/vasija#inspiraA",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "inspiraA",
+        "es": "inspira a"
+      },
+      "attributes": [
+        "object",
+        "transitive",
+        "external",
+        "irreflexive",
+        "asymmetric"
+      ],
+      "comment": {
+        "es": "Indica que una obra artística ha sido fuente de inspiración para otra, y esta relación puede ser transitiva pero no reflexiva ni simétrica."
+      },
+      "domain": "1",
+      "range": "1",
+      "pos": [
+        309.49,
+        -58.16
+      ]
+    },
+    {
+      "id": "16",
+      "iri": "http://example.org/vasija#componeEstrofa",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "componeEstrofa",
+        "es": "compone estrofa"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica que un poeta es autor de una estrofa."
+      },
+      "domain": "2",
+      "range": "17",
+      "pos": [
+        742.63,
+        -254.68
+      ]
+    },
+    {
+      "id": "20",
+      "iri": "http://example.org/vasija#participaEn",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "participaEn",
+        "es": "participa en"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica la participación de una persona en un evento cultural."
+      },
+      "domain": "3",
+      "range": "11",
+      "inverse": "14"
+    },
+    {
+      "id": "21",
+      "iri": "http://example.org/vasija#ocurreEn",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "ocurreEn",
+        "es": "ocurre en"
+      },
+      "attributes": [
+        "object",
+        "functional",
+        "external"
+      ],
+      "comment": {
+        "es": "Establece el lugar geográfico donde se lleva a cabo un evento cultural."
+      },
+      "domain": "11",
+      "range": "22",
+      "pos": [
+        625.17,
+        305.04
+      ]
+    },
+    {
+      "id": "23",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "2",
+      "range": "3",
+      "pos": [
+        962.78,
+        23.61
+      ]
+    },
+    {
+      "id": "24",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "9",
+      "range": "3",
+      "pos": [
+        1122.36,
+        355.58
+      ]
+    },
+    {
+      "id": "25",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "8",
+      "range": "3",
+      "pos": [
+        1049.9,
+        409.29
+      ]
+    },
+    {
+      "id": "26",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "27",
+      "range": "3",
+      "pos": [
+        1163.6,
+        264.6
+      ]
+    },
+    {
+      "id": "28",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "29",
+      "range": "3",
+      "pos": [
+        1150.3,
+        149.41
+      ]
+    },
+    {
+      "id": "30",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "18",
+      "range": "1",
+      "pos": [
+        147.45,
+        28.47
+      ]
+    },
+    {
+      "id": "31",
+      "iri": "http://example.org/vasija#esParteDe",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "esParteDe",
+        "es": "es parte de"
+      },
+      "attributes": [
+        "object",
+        "transitive",
+        "external"
+      ],
+      "comment": {
+        "es": "Expresa que una estrofa pertenece a una obra artística más amplia."
+      },
+      "domain": "17",
+      "range": "1",
+      "pos": [
+        434.34,
+        -104.46
+      ]
+    },
+    {
+      "id": "32",
+      "iri": "http://example.org/vasija#fechaCreacion",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "fechaCreacion",
+        "es": "fecha de creación"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "comment": {
+        "es": "Fecha en que fue creada una obra artística, como una pintura, canción o poema."
+      },
+      "domain": "1",
+      "range": "33",
+      "pos": [
+        202.65,
+        171.04
+      ]
+    },
+    {
+      "id": "34",
+      "iri": "http://example.org/vasija#duracion",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "duracion",
+        "es": "duración"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "comment": {
+        "es": "Duración temporal de una canción expresada en minutos o segundos."
+      },
+      "domain": "0",
+      "range": "35",
+      "pos": [
+        -49.13,
+        551.73
+      ]
+    },
+    {
+      "id": "36",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "19",
+      "range": "1",
+      "pos": [
+        210.57,
+        -52.95
+      ]
+    },
+    {
+      "id": "37",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "0",
+      "range": "1",
+      "pos": [
+        217.45,
+        298.14
+      ]
+    },
+    {
+      "id": "38",
+      "iri": "http://example.org/vasija#colaboraCon",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "colaboraCon",
+        "es": "colabora con"
+      },
+      "attributes": [
+        "object",
+        "symmetric",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica una relación de colaboración mutua entre personas."
+      },
+      "domain": "3",
+      "range": "3",
+      "pos": [
+        1086.54,
+        117.12
+      ]
+    },
+    {
+      "id": "42",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "6",
+      "range": "7",
+      "pos": [
+        297,
+        1309.33
+      ]
+    },
+    {
+      "id": "43",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "10",
+      "range": "7",
+      "pos": [
+        59.74,
+        1090.63
+      ]
+    },
+    {
+      "id": "44",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "12",
+      "range": "11",
+      "pos": [
+        782.86,
+        633.47
+      ]
+    },
+    {
+      "id": "45",
+      "iri": "http://example.org/vasija#esAutorDe",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "esAutorDe",
+        "es": "es autor de"
+      },
+      "attributes": [
+        "inverse functional",
+        "object",
+        "external"
+      ],
+      "comment": {
+        "es": "Indica que una persona ha creado una obra artística."
+      },
+      "domain": "3",
+      "range": "1",
+      "inverse": "5"
+    },
+    {
+      "id": "46",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "13",
+      "range": "11",
+      "pos": [
+        669.39,
+        631.41
+      ]
+    },
+    {
+      "id": "47",
+      "iri": "http://example.org/vasija#compartePatrimonioCon",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "compartePatrimonioCon",
+        "es": "comparte patrimonio con"
+      },
+      "attributes": [
+        "object",
+        "external",
+        "reflexive"
+      ],
+      "comment": {
+        "es": "Representa que un elemento cultural comparte patrimonio o rasgos comunes con otro elemento cultural, incluso consigo mismo."
+      },
+      "domain": "7",
+      "range": "7",
+      "pos": [
+        264.17,
+        1193.35
+      ]
+    },
+    {
+      "id": "49",
+      "iri": "http://example.org/vasija#tieneRitmo",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "tieneRitmo",
+        "es": "tiene ritmo"
+      },
+      "attributes": [
+        "object",
+        "functional",
+        "external"
+      ],
+      "comment": {
+        "es": "Establece el ritmo musical que caracteriza a una canción determinada."
+      },
+      "domain": "0",
+      "range": "10",
+      "pos": [
+        38.56,
+        705.51
+      ]
+    },
+    {
+      "id": "50",
+      "iri": "http://example.org/vasija#titulo",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "titulo",
+        "es": "título"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "comment": {
+        "es": "Título oficial de una obra artística, como una canción, pintura o poema."
+      },
+      "domain": "1",
+      "range": "40",
+      "pos": [
+        184.59,
+        94.68
+      ]
+    },
+    {
+      "id": "51",
+      "iri": "http://example.org/vasija#nombre",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "nombre",
+        "es": "nombre"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "comment": {
+        "es": "Nombre propio de una persona, lugar geográfico o evento cultural."
+      },
+      "domain": "41",
+      "range": "48",
+      "pos": [
+        880.33,
+        -202.47
+      ]
+    },
+    {
+      "id": "52",
+      "iri": "http://example.org/vasija#contenido",
+      "baseIri": "http://example.org/vasija",
+      "label": {
+        "IRI-based": "contenido",
+        "es": "contenido"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "comment": {
+        "es": "Texto o lírica que forma parte de una estrofa de una obra artística."
+      },
+      "domain": "17",
+      "range": "39",
+      "pos": [
+        490.41,
+        -475.39
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-41-3-0",
+      "domain": "41",
+      "range": "3",
+      "pos": [
+        893.88,
+        91.25
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-41-22-1",
+      "domain": "41",
+      "range": "22",
+      "pos": [
+        673.39,
+        46.85
+      ]
+    },
+    {
+      "id": "GENERATED-UNION-41-11-2",
+      "domain": "41",
+      "range": "11",
+      "pos": [
+        770.19,
+        202.86
+      ]
+    }
+  ]
+}

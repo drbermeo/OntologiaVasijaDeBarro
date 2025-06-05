@@ -1,0 +1,376 @@
+@prefix : <http://example.org/vasija_De_Barro_Ecuatoriana#VasijaDeBarro_Ontology> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/vasija_De_Barro_Ecuatoriana#VasijaDeBarro_Ontology> .
+
+<http://example.org/vasija_De_Barro_Ecuatoriana#VasijaDeBarro_Ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#titulo
+<http://example.org/vasija_De_Barro_Ecuatoriana#titulo> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#colaboraCon
+<http://example.org/vasija_De_Barro_Ecuatoriana#colaboraCon> rdf:type owl:ObjectProperty ,
+                                                                      owl:SymmetricProperty ;
+                                                             rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> ;
+                                                             rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#compartePatrimonioCon
+<http://example.org/vasija_De_Barro_Ecuatoriana#compartePatrimonioCon> rdf:type owl:ObjectProperty ,
+                                                                                owl:ReflexiveProperty ;
+                                                                       rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural> ;
+                                                                       rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#componeEstrofa
+<http://example.org/vasija_De_Barro_Ecuatoriana#componeEstrofa> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Poeta> ;
+                                                                rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#esAutorDe
+<http://example.org/vasija_De_Barro_Ecuatoriana#esAutorDe> rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf <http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor> ;
+                                                           rdf:type owl:InverseFunctionalProperty ;
+                                                           rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> ;
+                                                           rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#esParteDe
+<http://example.org/vasija_De_Barro_Ecuatoriana#esParteDe> rdf:type owl:ObjectProperty ,
+                                                                    owl:TransitiveProperty ;
+                                                           rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa> ;
+                                                           rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#inspiraA
+<http://example.org/vasija_De_Barro_Ecuatoriana#inspiraA> rdf:type owl:ObjectProperty ,
+                                                                   owl:AsymmetricProperty ,
+                                                                   owl:TransitiveProperty ,
+                                                                   owl:IrreflexiveProperty ;
+                                                          rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                          rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                          owl:propertyChainAxiom ( <http://example.org/vasija_De_Barro_Ecuatoriana#inspiraA>
+                                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#inspiraA>
+                                                                                 ) .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#ocurreEn
+<http://example.org/vasija_De_Barro_Ecuatoriana#ocurreEn> rdf:type owl:ObjectProperty ,
+                                                                   owl:FunctionalProperty ;
+                                                          rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> ;
+                                                          rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeografico> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#participaEn
+<http://example.org/vasija_De_Barro_Ecuatoriana#participaEn> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <http://example.org/vasija_De_Barro_Ecuatoriana#tieneParticipante> ;
+                                                             rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> ;
+                                                             rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#seInspiraEn
+<http://example.org/vasija_De_Barro_Ecuatoriana#seInspiraEn> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                             rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor
+<http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor> rdf:type owl:ObjectProperty ,
+                                                                     owl:AsymmetricProperty ,
+                                                                     owl:IrreflexiveProperty ;
+                                                            rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                            rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#tieneParticipante
+<http://example.org/vasija_De_Barro_Ecuatoriana#tieneParticipante> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> ;
+                                                                   rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#tieneRitmo
+<http://example.org/vasija_De_Barro_Ecuatoriana#tieneRitmo> rdf:type owl:ObjectProperty ,
+                                                                     owl:FunctionalProperty ;
+                                                            rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Cancion> ;
+                                                            rdfs:range <http://example.org/vasija_De_Barro_Ecuatoriana#RitmoMusical> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#contenido
+<http://example.org/vasija_De_Barro_Ecuatoriana#contenido> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa> ;
+                                                           rdfs:range xsd:string .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#duracion
+<http://example.org/vasija_De_Barro_Ecuatoriana#duracion> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#Cancion> ;
+                                                          rdfs:range xsd:decimal .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#fechaCreacion
+<http://example.org/vasija_De_Barro_Ecuatoriana#fechaCreacion> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                               rdfs:range xsd:date .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#nombre
+<http://example.org/vasija_De_Barro_Ecuatoriana#nombre> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural>
+                                                                                    <http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeográfico>
+                                                                                    <http://example.org/vasija_De_Barro_Ecuatoriana#Persona>
+                                                                                  )
+                                                                    ] ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#título
+<http://example.org/vasija_De_Barro_Ecuatoriana#título> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> ;
+                                                        rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Cancion
+<http://example.org/vasija_De_Barro_Ecuatoriana#Cancion> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural
+<http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Escultor
+<http://example.org/vasija_De_Barro_Ecuatoriana#Escultor> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa
+<http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural
+<http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Grabacion
+<http://example.org/vasija_De_Barro_Ecuatoriana#Grabacion> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#InstrumentoMusical
+<http://example.org/vasija_De_Barro_Ecuatoriana#InstrumentoMusical> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Intelectual
+<http://example.org/vasija_De_Barro_Ecuatoriana#Intelectual> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeografico
+<http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeografico> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeográfico
+<http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeográfico> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Musico
+<http://example.org/vasija_De_Barro_Ecuatoriana#Musico> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica
+<http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Persona
+<http://example.org/vasija_De_Barro_Ecuatoriana#Persona> rdf:type owl:Class .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Pintor
+<http://example.org/vasija_De_Barro_Ecuatoriana#Pintor> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Pintura
+<http://example.org/vasija_De_Barro_Ecuatoriana#Pintura> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Poema
+<http://example.org/vasija_De_Barro_Ecuatoriana#Poema> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#ObraArtistica> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Poeta
+<http://example.org/vasija_De_Barro_Ecuatoriana#Poeta> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#Persona> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Reunion
+<http://example.org/vasija_De_Barro_Ecuatoriana#Reunion> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#EventoCultural> .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#RitmoMusical
+<http://example.org/vasija_De_Barro_Ecuatoriana#RitmoMusical> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://example.org/vasija_De_Barro_Ecuatoriana#ElementoCultural> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Albazo
+<http://example.org/vasija_De_Barro_Ecuatoriana#Albazo> rdf:type owl:NamedIndividual ,
+                                                                 <http://example.org/vasija_De_Barro_Ecuatoriana#RitmoMusical> ;
+                                                        <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Albazo" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Centro_de_Quito
+<http://example.org/vasija_De_Barro_Ecuatoriana#Centro_de_Quito> rdf:type owl:NamedIndividual ,
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeografico> ;
+                                                                 <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Centro Histórico de Quito" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Danzante
+<http://example.org/vasija_De_Barro_Ecuatoriana#Danzante> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#RitmoMusical> ;
+                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Danzante" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#El_Origen_Pintura
+<http://example.org/vasija_De_Barro_Ecuatoriana#El_Origen_Pintura> rdf:type owl:NamedIndividual ,
+                                                                            <http://example.org/vasija_De_Barro_Ecuatoriana#Pintura> ;
+                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#inspiraA> <http://example.org/vasija_De_Barro_Ecuatoriana#Vasija_de_Barro_Cancion> ;
+                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor> <http://example.org/vasija_De_Barro_Ecuatoriana#Oswaldo_Guayasamin> ;
+                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#titulo> "El Origen" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#El_Pollito_Ortiz
+<http://example.org/vasija_De_Barro_Ecuatoriana#El_Pollito_Ortiz> rdf:type owl:NamedIndividual ,
+                                                                           <http://example.org/vasija_De_Barro_Ecuatoriana#Musico> ;
+                                                                  <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "El Pollito Ortiz" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Gonzalo_Benitez
+<http://example.org/vasija_De_Barro_Ecuatoriana#Gonzalo_Benitez> rdf:type owl:NamedIndividual ,
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#Musico> ;
+                                                                 <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Gonzalo Benítez" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Gustavo_Muller
+<http://example.org/vasija_De_Barro_Ecuatoriana#Gustavo_Muller> rdf:type owl:NamedIndividual ,
+                                                                         <http://example.org/vasija_De_Barro_Ecuatoriana#Musico> ;
+                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Gustavo Muller" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Hugo_Aleman
+<http://example.org/vasija_De_Barro_Ecuatoriana#Hugo_Aleman> rdf:type owl:NamedIndividual ,
+                                                                      <http://example.org/vasija_De_Barro_Ecuatoriana#Intelectual> ;
+                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Hugo Alemán" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Jaime_Valencia
+<http://example.org/vasija_De_Barro_Ecuatoriana#Jaime_Valencia> rdf:type owl:NamedIndividual ,
+                                                                         <http://example.org/vasija_De_Barro_Ecuatoriana#Escultor> ;
+                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Jaime Valencia" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Carrera_Andrade
+<http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Carrera_Andrade> rdf:type owl:NamedIndividual ,
+                                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#Poeta> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Jorge Carrera Andrade" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Enrique_Adoum
+<http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Enrique_Adoum> rdf:type owl:NamedIndividual ,
+                                                                              <http://example.org/vasija_De_Barro_Ecuatoriana#Intelectual> ;
+                                                                     <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Jorge Enrique Adoum" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Luis_Alberto_Valencia
+<http://example.org/vasija_De_Barro_Ecuatoriana#Luis_Alberto_Valencia> rdf:type owl:NamedIndividual ,
+                                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#Musico> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Luis Alberto Valencia" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Oswaldo_Guayasamin
+<http://example.org/vasija_De_Barro_Ecuatoriana#Oswaldo_Guayasamin> rdf:type owl:NamedIndividual ,
+                                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#Pintor> ;
+                                                                    <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Oswaldo Guayasamín" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Primera_Estrofa_Poema
+<http://example.org/vasija_De_Barro_Ecuatoriana#Primera_Estrofa_Poema> rdf:type owl:NamedIndividual ,
+                                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#Estrofa> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#esParteDe> <http://example.org/vasija_De_Barro_Ecuatoriana#Vasija_de_Barro_Cancion> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor> <http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Carrera_Andrade> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#contenido> "Yo quiero que a mí me entierren como a mis antepasados en el vientre oscuro y frescode una vasija de barro" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Primera_Grabacion_Vasija
+<http://example.org/vasija_De_Barro_Ecuatoriana#Primera_Grabacion_Vasija> rdf:type owl:NamedIndividual ,
+                                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#Grabacion> ;
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#tieneParticipante> <http://example.org/vasija_De_Barro_Ecuatoriana#Gonzalo_Benitez> ,
+                                                                                                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#Luis_Alberto_Valencia> ,
+                                                                                                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#Oswaldo_Guayasamin> ;
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Primera Grabación Vasija de Barro" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Residencia_Guayasamin
+<http://example.org/vasija_De_Barro_Ecuatoriana#Residencia_Guayasamin> rdf:type owl:NamedIndividual ,
+                                                                                <http://example.org/vasija_De_Barro_Ecuatoriana#LugarGeografico> ;
+                                                                       <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Residencia de Guayasamín" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Reunion_7_Noviembre_1950
+<http://example.org/vasija_De_Barro_Ecuatoriana#Reunion_7_Noviembre_1950> rdf:type owl:NamedIndividual ,
+                                                                                   <http://example.org/vasija_De_Barro_Ecuatoriana#Reunion> ;
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#ocurreEn> <http://example.org/vasija_De_Barro_Ecuatoriana#Residencia_Guayasamin> ;
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#tieneParticipante> <http://example.org/vasija_De_Barro_Ecuatoriana#Hugo_Aleman> ,
+                                                                                                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#Jorge_Carrera_Andrade> ,
+                                                                                                                                             <http://example.org/vasija_De_Barro_Ecuatoriana#Oswaldo_Guayasamin> ;
+                                                                          <http://example.org/vasija_De_Barro_Ecuatoriana#nombre> "Reunión del 7 de noviembre de 1950" .
+
+
+###  http://example.org/vasija_De_Barro_Ecuatoriana#Vasija_de_Barro_Cancion
+<http://example.org/vasija_De_Barro_Ecuatoriana#Vasija_de_Barro_Cancion> rdf:type owl:NamedIndividual ,
+                                                                                  <http://example.org/vasija_De_Barro_Ecuatoriana#Cancion> ;
+                                                                         <http://example.org/vasija_De_Barro_Ecuatoriana#tieneAutor> <http://example.org/vasija_De_Barro_Ecuatoriana#Gonzalo_Benitez> ,
+                                                                                                                                     <http://example.org/vasija_De_Barro_Ecuatoriana#Luis_Alberto_Valencia> ;
+                                                                         <http://example.org/vasija_De_Barro_Ecuatoriana#tieneRitmo> <http://example.org/vasija_De_Barro_Ecuatoriana#Danzante> ;
+                                                                         <http://example.org/vasija_De_Barro_Ecuatoriana#titulo> "Vasija de Barro" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
